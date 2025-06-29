@@ -18,7 +18,7 @@ const slides = [
 
 export default function RightPromoBanner() {
   return (
-    <div className="w-3/4">
+    <div className="w-full lg:w-3/4">
       <Swiper
         modules={[Autoplay, Pagination]}
         pagination={{ clickable: true }}
@@ -26,7 +26,7 @@ export default function RightPromoBanner() {
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <div className="relative h-[344px] w-full bg-black text-white">
+            <div className="relative aspect-[16/6] w-full text-white bg-black">
               <Image
                 src={slide.image}
                 alt="Promo Banner"

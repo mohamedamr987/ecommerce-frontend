@@ -23,8 +23,8 @@ export default function Navbar() {
   const navLinks = ["Home", "Contact", "About", "Sign Up"];
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-gray-200">
-      <div className="container mx-auto flex items-center justify-between px-4 py-4">
+    <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 ">
+      <div className="w-full px-4 lg:px-16 flex items-center justify-between py-4">
         {/* Logo */}
         <Link
           href="/"
@@ -56,7 +56,7 @@ export default function Navbar() {
         {/* Right side */}
         <div className="flex items-center gap-6">
           {/* Search */}
-          <SearchNavbarInput className="hidden lg:block" />
+          <SearchNavbarInput className="hidden md:block" />
 
           {/* Wishlist */}
           <button>
