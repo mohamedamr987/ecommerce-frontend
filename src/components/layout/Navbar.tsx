@@ -7,6 +7,16 @@ import { useState } from "react";
 import AssetsPng from "@/constants/assetsPng";
 import AssetsSvg from "../../constants/assetsSvg";
 
+function SearchNavbarInput({ className = "" }) {
+  return (
+    <input
+      type="text"
+      placeholder="What are you looking for?"
+      className={`rounded-md px-4 py-2 bg-gray-100 text-sm text-gray-700 outline-none focus:ring-2 focus:ring-black ${className}`}
+    />
+  );
+}
+
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -46,9 +56,7 @@ export default function Navbar() {
         {/* Right side */}
         <div className="flex items-center gap-6">
           {/* Search */}
-          <div className="hidden lg:flex items-center gap-2 rounded-lg bg-gray-100 px-4 py-2 text-sm text-gray-700">
-            <span className="opacity-50">What are you looking for?</span>
-          </div>
+          <SearchNavbarInput className="hidden lg:block" />
 
           {/* Wishlist */}
           <button>
@@ -93,9 +101,7 @@ export default function Navbar() {
           </ul>
 
           {/* Optional: mobile search */}
-          <div className="mt-4 rounded-lg bg-gray-100 px-4 py-2 text-sm text-gray-700">
-            <span className="opacity-50">What are you looking for?</span>
-          </div>
+          <SearchNavbarInput className="mt-4" />
         </div>
       )}
     </nav>
