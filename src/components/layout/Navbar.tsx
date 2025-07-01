@@ -44,7 +44,9 @@ export default function Navbar() {
           {navLinks.map((item) => (
             <li key={item}>
               <Link
-                href={`/${item.toLowerCase().replace(" ", "-")}`}
+                href={`/${
+                  item == "Home" ? "" : item.toLowerCase().replace(" ", "-")
+                }`}
                 className="text-base font-normal text-black hover:underline"
               >
                 {item}

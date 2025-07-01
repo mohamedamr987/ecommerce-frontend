@@ -23,6 +23,7 @@ export default function RightPromoBanner() {
         modules={[Autoplay, Pagination]}
         pagination={{ clickable: true }}
         className="custom-swiper"
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
